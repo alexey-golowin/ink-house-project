@@ -1,0 +1,21 @@
+/* fonts.css */
+
+/* Raleway Medium */
+@font-face {
+    font-family: 'Raleway';
+    src: url('./Raleway-Medium.woff2') format('woff2'),
+         url('./Raleway-Medium.woff') format('woff');
+    font-weight: 500;
+    font-style: normal;
+    font-display: swap;
+}
+
+/* Raleway Bold */
+@font-face {
+    font-family: 'Raleway';
+    src: url('./Raleway-Bold.woff2') format('woff2'),
+         url('./Raleway-Medium.woff') format('woff');
+    font-weight: 700;
+    font-style: normal;
+    font-display: swap;
+}
