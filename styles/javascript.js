@@ -417,6 +417,6 @@ document.addEventListener('DOMContentLoaded', function() {
             }
         });
     });
-
+    
     console.log('Все скрипты инициализированы');
 });
