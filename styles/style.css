@@ -273,53 +273,80 @@ body {
 }
 
 .reproductions__filter-list {
-	display: flex;
-	gap: 34px;
-	margin: 0;
-	padding: 0;
-	list-style: none;
+    display: flex;
+    gap: 35px;
+    margin: 0;
+    padding: 0;
+    list-style: none;
 }
 
 .reproductions__filter-item {
 	margin: 0;
 }
 
+/* Базовые стили кнопок фильтра */
+/* Базовые стили кнопок фильтра (дефолтное состояние) */
 .filter-btn {
-	border: none;
-	border-radius: 20px;
-	padding: 9px 19px;
-	color: var(--color-dark);
-	font-family: 'Raleway', sans-serif;
-	font-weight: 500;
-	font-size: clamp(0.875rem, 0.625rem + 0.8vw, 1.25rem);
-	background: var(--color-light-green);
-	transition: all 0.3s ease;
-	cursor: pointer;
+    border: none;
+    border-radius: 20px;
+    padding: 9px 19px;
+    color: var(--color-dark); /* Текст 2C2D35 */
+    font-family: 'Raleway', sans-serif;
+    font-weight: 500;
+    font-size: clamp(0.875rem, 0.625rem + 0.8vw, 1.25rem);
+    background: var(--color-light-green); /* Фон D4E8D9 */
+    transition: all 0.3s ease;
+    cursor: pointer;
 }
 
-/* .filter-btn:hover {
-	border: 1px solid var(--color-primary);
-	color: var(--color-primary);
-	background-color: var(--color-background-one);
-} */
+/* Ховер состояние */
+.filter-btn:hover {
+    background-color: var(--color-primary); /* Фон 598D66 */
+    color: var(--color-background-one); /* Текст F4F6F5 */
+}
 
+/* Фокус состояние */
+.filter-btn:focus {
+    outline: 2px solid var(--color-dark-green);
+    outline-offset: -2px;
+    background-color: var(--color-light-green); /* Фон D4E8D9 */
+    color: var(--color-primary); /* Текст 598D66 */
+}
+
+/* Активное состояние */
 .filter-btn--active {
-	border-color: var(--color-dark-green);
-	color: white;
-	background: var(--color-dark-green);
+    background-color: var(--color-dark-green); /* Фон 376B44 */
+    color: var(--color-white); /* Текст FFFFFF */
 }
 
+/* Ховер на активной кнопке */
 .filter-btn--active:hover {
-	border-color: var(--color-dark-green);
-	box-shadow: none;
-	color: white;
-	background: var(--color-dark-green);
-	transform: none;
+    background-color: var(--color-dark-green); /* Фон остается 376B44 */
+    color: var(--color-white); /* Текст остается FFFFFF */
 }
 
-.filter-btn:active {
-	background: var(--color-darker-green);
-	/* transform: scale(0.98); */
+/* Фокус на активной кнопке */
+.filter-btn--active:focus {
+    outline: 2px solid var(--color-dark-green);
+    outline-offset: -2px;
+    background-color: var(--color-light-green); /* Фон D4E8D9 */
+    color: var(--color-primary); /* Текст 598D66 */
+}
+
+/* Сброс стандартных стилей для кнопок */
+.filter-btn {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    text-decoration: none;
+}
+
+/* Сброс стандартных стилей для кнопок */
+.filter-btn {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    text-decoration: none;
 }
 
 /* Card Styles */
@@ -355,6 +382,7 @@ body {
 .card:hover {
 	box-shadow: 0 4px 15px rgba(89, 141, 102, 100);
 	transform: translateY(-5px);
+	z-index: 10;
 }
 
 .card__image {
@@ -511,8 +539,9 @@ body {
 }
 
 .collection-button:focus {
-	border: 2px solid var(--color-gold-dark);
-	outline: none;
+	outline: 2px solid var(--color-gold-dark);
+	outline-offset: -2px;
+	border: none;
 	color: var(--color-dark);
 	background-color: var(--color-gold-light);
 }
@@ -750,7 +779,7 @@ body {
 }
 
 .footer__social-link:active {
-	background-color: transparent !important;
+	background-color: transparent;
 	transform: translateY(0) scale(0.95);
 }
 
@@ -878,6 +907,19 @@ body {
 	.footer {
 		padding: 30px clamp(20px, 5%, 40px);
 	}
+
+	/* .card:hover {
+        transform: none;
+        box-shadow: none;
+    }
+    
+    .team__icon:hover {
+        transform: none;
+    }
+    
+    .footer__social-link:hover {
+        transform: none;
+    } */
 }
 
 /* 768px */
@@ -954,14 +996,14 @@ body {
 	}
 
 	.reproductions__filter-list {
-		gap: 30px;
-		flex-wrap: wrap;
-	}
+    gap: 33px;
+    flex-wrap: wrap;
+}
 
 	.filter-btn {
-		padding: 9px 21px;
-		font-size: clamp(0.875rem, 1.625rem + 0.8vw, 1.25rem);
-	}
+    padding: 9px 20px;
+    font-size: clamp(0.875rem, 1.625rem + 0.8vw, 1.25rem);
+}
 
 	/* Cards */
 	.card-list {
@@ -1405,10 +1447,10 @@ body {
 	}
 
 	.filter-btn {
-		padding: 10px 20px;
-		font-size: clamp(0.875rem, 1.625rem + 0.5vw, 1.14rem);
-		white-space: nowrap;
-	}
+    padding: 10px 20px;
+    font-size: clamp(0.875rem, 1.625rem + 0.5vw, 1.14rem);
+    white-space: nowrap;
+}
 
 	/* Cards */
 	.card-list {
@@ -1538,9 +1580,9 @@ body {
 	}
 
 	.collection-button {
-		padding: 13px 34px;
-		font-size: clamp(1.15rem, 0.85rem + 1vw, 1rem);
-	}
+    padding: 14px 34px;
+    font-size: clamp(1.15rem, 0.85rem + 1vw, 1rem);
+}
 
 	/* Team */
 	.team__image img {
@@ -1985,7 +2027,7 @@ body {
 
 	.card-list {
 		overflow: hidden;
-		grid-template-columns: 1fr !important;
+		grid-template-columns: 1fr;
 		gap: 30px;
 		margin: 0 10px;
 	}
@@ -2041,10 +2083,10 @@ body {
 	}
 
 	.collection-content h2 {
-		font-size: clamp(1.4rem, 0.68rem + 2vw, 1rem);
-		padding-left: 21px;
-		padding-top: 52px;
-		line-height: 106%;
+    font-size: clamp(1.4rem, 0.68rem + 2vw, 1rem);
+    padding-left: 21px;
+    padding-top: 52px;
+    line-height: 106%;
 	}
 
 	.collection-content p {
@@ -2056,9 +2098,9 @@ body {
 	}
 
 	.collection-content p+p:last-of-type {
-		margin-bottom: 30px;
-		letter-spacing: 0;
-		line-height: 137%;
+    margin-bottom: 29px;
+    letter-spacing: 0;
+    line-height: 137%;
 	}
 
 	.collection-icon {
@@ -2176,7 +2218,7 @@ body {
 
 	.footer__content::after {
 		content: 'Мастерская';
-		display: block !important;
+		display: block;
 		grid-area: contacts;
 		text-align: left;
 		color: #666666;
@@ -2625,7 +2667,7 @@ body {
 
 	.card-list {
 		overflow: hidden;
-		grid-template-columns: 1fr !important;
+		grid-template-columns: 1fr;
 		gap: 30px;
 		margin: 0 10px;
 	}
@@ -2816,7 +2858,7 @@ body {
 
 	.footer__content::after {
 		content: 'Мастерская';
-		display: block !important;
+		display: block;
 		grid-area: contacts;
 		text-align: left;
 		color: #666666;
@@ -3294,7 +3336,7 @@ body {
 	}
 
 	.address {
-		display: flex !important;
+		display: flex;
 		flex-direction: column;
 		gap: 4px;
 	}
@@ -3570,7 +3612,7 @@ body {
     
     /* Контакты по центру */
     .footer__contacts-info {
-        display: flex !important;
+        display: flex;
         flex-direction: column;
         align-items: center;
         gap: 10px;
@@ -3610,5 +3652,123 @@ body {
     /* Подготовка к большим экранам */
     .header {
       padding: 30px clamp(20px, 5%, 40px);
+    }
+}
+
+/* ========== HOVER ЭФФЕКТЫ ТОЛЬКО ДЛЯ ДЕСКТОПА (БЕЗОПАСНАЯ ВСТАВКА) ========== */
+
+@media (hover: hover) and (pointer: fine) {
+    /* Кнопки фильтра */
+    .filter-btn:hover {
+        background-color: var(--color-primary);
+        color: var(--color-background-one);
+    }
+    
+    .filter-btn--active:hover {
+        background-color: var(--color-dark-green);
+        color: var(--color-white);
+    }
+    
+    /* Карточки */
+    .card:hover {
+        box-shadow: 0 4px 15px rgba(89, 141, 102, 100);
+        transform: translateY(-5px);
+        z-index: 10;
+    }
+    
+    .card__button:hover {
+        color: var(--color-background-one);
+        background-color: var(--color-primary);
+    }
+    
+    /* Хедер */
+    .header__menu a:hover {
+        color: var(--color-dark-green);
+    }
+    
+    .header__link--icon:hover {
+        color: var(--color-primary);
+        transform: scale(1.1);
+    }
+    
+    /* Герой */
+    .hero__button:hover {
+        color: var(--color-background-one);
+        background-color: var(--color-primary);
+        transform: translateY(-2px);
+    }
+    
+    /* Футер */
+    .footer__nav-list a:hover {
+        color: #333;
+    }
+    
+    .footer__social-link:hover {
+        transform: translateY(-2px);
+    }
+    
+    .footer__social-link:hover .social-icon {
+        opacity: 0;
+    }
+    
+    .footer__social-link:hover .social-icon-hover {
+        opacity: 1;
+    }
+    
+    .footer__social-link:nth-child(1):hover {
+        background-color: #1877f2;
+    }
+    
+    .footer__social-link:nth-child(2):hover {
+        background: radial-gradient(circle at 30% 107%, #fdf497 0%, #fdf497 5%, #fd5949 45%, #d6249f 60%, #285AEB 90%);
+    }
+    
+    .footer__social-link:nth-child(3):hover {
+        background-color: #ff0000;
+    }
+    
+    .address__phone:hover {
+        color: var(--color-primary);
+    }
+    
+    /* Команда */
+    .team__icon:hover {
+        transform: scale(1.1);
+    }
+    
+    /* Коллекция */
+    .collection-button:hover {
+        color: var(--color-dark);
+        background-color: var(--color-gold-light);
+        transform: translateY(-2px);
+    }
+}
+
+/* ========== ОТКЛЮЧЕНИЕ HOVER ДЛЯ ТАЧ-УСТРОЙСТВ ========== */
+
+@media (hover: none) and (pointer: coarse) {
+    .card:hover {
+        box-shadow: none;
+        transform: none;
+    }
+    
+    .header__link--icon:hover {
+        transform: none;
+    }
+    
+    .hero__button:hover {
+        transform: none;
+    }
+    
+    .footer__social-link:hover {
+        transform: none;
+    }
+    
+    .team__icon:hover {
+        transform: none;
+    }
+    
+    .collection-button:hover {
+        transform: none;
     }
 }

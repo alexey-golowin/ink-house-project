@@ -165,7 +165,7 @@ document.addEventListener('DOMContentLoaded', function() {
         function handleNavLogo() {
             const existingNavLogo = headerNav.querySelector('.header__nav-logo');
             
-            if (window.innerWidth <= 320) {
+            if (window.innerWidth <= 479) {
                 // Добавляем логотип если его нет
                 if (!existingNavLogo) {
                     const navLogo = document.createElement('div');
@@ -380,6 +380,51 @@ document.addEventListener('DOMContentLoaded', function() {
     }
 
     initSocialIcons();
+
+    // ===== ФИКС ДЛЯ COLLECTION-BUTTON =====
+    function initCollectionButtons() {
+        const collectionButtons = document.querySelectorAll('.collection-button');
+        
+        collectionButtons.forEach(button => {
+            // Сбрасываем фокус при уходе курсора
+            button.addEventListener('mouseleave', function() {
+                // Небольшая задержка чтобы убедиться что это действительно уход курсора
+                setTimeout(() => {
+                    if (!this.matches(':hover')) {
+                        this.blur(); // Снимаем фокус
+                    }
+                }, 50);
+            });
+            
+            // Альтернативный вариант - сброс при mouseup (отпускании кнопки мыши)
+            button.addEventListener('mouseup', function() {
+                // Если кнопка была нажата и отпущена, сбрасываем фокус
+                setTimeout(() => {
+                    this.blur();
+                }, 150);
+            });
+            
+            // Дополнительно: предотвращаем сохранение фокуса после клика
+            button.addEventListener('click', function(event) {
+                // Для тач-устройств сразу сбрасываем фокус
+                if ('ontouchstart' in window) {
+                    setTimeout(() => {
+                        this.blur();
+                    }, 300);
+                }
+            });
+            
+            // Обработка клавиатуры - сброс фокуса при нажатии Escape
+            button.addEventListener('keydown', function(event) {
+                if (event.key === 'Escape') {
+                    this.blur();
+                }
+            });
+        });
+    }
+
+    // Инициализируем при загрузке
+    initCollectionButtons();
 
     // ===== ДОПОЛНИТЕЛЬНЫЕ УЛУЧШЕНИЯ =====
     const cards = document.querySelectorAll('.card');

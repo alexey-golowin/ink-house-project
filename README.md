@@ -2,7 +2,7 @@
 
 Ссылка на репозиторий: https://github.com/alexey-golowin/ink-house-project
 
-Ссылка на GitHub Pages: https://github.com/alexey-golowin/ink-house-project
+Ссылка на GitHub Pages: https://alexey-golowin.github.io/ink-house-project/
 
 Ссылка на макет: https://www.figma.com/design/YhYA6mRf2DeQA8vabG3Ro7/House--Copy-?m=auto&t=0ZYvFYvBaDKoMRuO-6
 
