@@ -1,76 +1,210 @@
 <!DOCTYPE html>
 <html lang="ru">
   <head>
+
+
+    <!-- 
+
+    МЕТАДАННЫЕ И ПОДКЛЮЧЕНИЕ РЕСУРСОВ
+
+    -->
+
+
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="./styles/fonts.css">
-    <link rel="stylesheet" href="./styles/variables.css">
-    <link rel="stylesheet" href="./styles/style.css">
-    <title>Ink. House - Реплики картин</title>
+
+
+    <!-- 
+
+    Подключение CSS стилей 
+
+    -->
+
+
+    <link rel="stylesheet" href="./styles/fonts.css">                 <!-- Шрифты -->
+    <link rel="stylesheet" href="./styles/variables.css">             <!-- CSS переменные -->
+    <link rel="stylesheet" href="./styles/style.css">                 <!-- Основные стили -->
+
+
+    <!-- 
+
+    Фавиконки для разных устройств 
+
+    -->
+
+
+    <link rel="icon" type="image/x-icon" href="./images/favicon/favicon.ico">
+    <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="./images/favicon/favicon-16x16.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="./images/favicon/apple-touch-icon.png">
+
+    <title>Ink. House - Реплики картин</title> <!-- Заголовок страницы -->
   </head>
   <body>
-        <header class="header">
-    <div class="container">
-        <!-- Логотип сверху -->
-        <a class="header__logo" href="/">
-            <img src="./svg/logo.svg" alt="Логотип Ink. House">
+
+
+    <!--
+
+    Шапка сайта
+
+    -->
+
+
+    <header class="header">
+      <div class="container">
+
+
+        <!-- 
+
+        Логотип - ссылка на главную страницу 
+
+        -->
+
+
+        <a class="header__logo" href="#!">
+        <img src="./svg/logo.svg" alt="Логотип Ink. House">
         </a>
-        
-        <!-- Нижняя строка: навигация слева, корзина справа -->
+
+
+        <!-- 
+
+        Нижняя строка шапки: навигация и корзина 
+
+        -->
+
+
         <div class="header__bottom">
-            <!-- Кнопка бургера для мобильных -->
-            <button class="burger" aria-label="Открыть меню" id="burgerBtn">
-                <span class="burger__line"></span>
-                <span class="burger__line"></span>
-                <span class="burger__line"></span>
-            </button>
 
-            <nav class="header__nav" id="headerNav">
-                <ul class="header__menu">
-                    <li class="header__item">
-                        <a class="header__link" href="#reproductions">Репродукции</a>
-                    </li>
-                    <li class="header__item">
-                        <a class="header__link" href="#new">Новинки</a>
-                    </li>
-                    <li class="header__item">
-                        <a class="header__link" href="#about">О нас</a>
-                    </li>
-                </ul>
-            </nav>
 
-            <!-- Корзина справа -->
-            <a class="header__cart header__link--icon" href="#cart" aria-label="Корзина">
-                <svg class="cart-icon" width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                    <g stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" clip-path="url(#a)">
-                        <path d="M9.25 21.167a.917.917 0 1 0 0-1.834.917.917 0 0 0 0 1.834M19.333 21.167a.917.917 0 1 0 0-1.834.917.917 0 0 0 0 1.834M1.917 1.917h3.666L8.04 14.19a1.83 1.83 0 0 0 1.833 1.476h8.91a1.83 1.83 0 0 0 1.834-1.476L22.083 6.5H6.5"/>
-                    </g>
+          <!-- 
+          
+          Бургер-меню для мобильных устройств 
 
-                    
-                    <!-- <defs>
-                        <clipPath id="clip0">
-                            <path fill="#fff" d="M0 0h24v24H0z"/>
-                        </clipPath>
-                    </defs> -->
-                </svg>
-                <!-- Бейдж для количества товаров -->
-                <span class="cart-badge" aria-hidden="true">0</span>
-            </a>
+          -->
+
+
+          <button class="burger" aria-label="Открыть меню" id="burgerBtn">
+          <span class="burger__line"></span>
+          <span class="burger__line"></span>
+          <span class="burger__line"></span>
+          </button>
+
+
+          <!-- 
+
+          Основная навигация по сайту 
+
+          -->
+
+
+          <nav class="header__nav" id="headerNav">
+            <ul class="header__menu">
+              <li class="header__item">
+                <a class="header__link" href="#!">Репродукции</a>
+              </li>
+              <li class="header__item">
+                <a class="header__link" href="#!">Новинки</a>
+              </li>
+              <li class="header__item">
+                <a class="header__link" href="#!">О нас</a>
+              </li>
+            </ul>
+          </nav>
+
+
+          <!-- 
+
+          Иконка корзины с бейджем количества товаров 
+
+          -->
+
+
+          <a class="header__cart header__link--icon" href="#!" aria-label="Корзина">
+
+
+            <!-- 
+
+            SVG иконка корзины 
+
+            -->
+
+
+            <svg class="cart-icon" width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <g stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" clip-path="url(#a)">
+                <path d="M9.25 21.167a.917.917 0 1 0 0-1.834.917.917 0 0 0 0 1.834M19.333 21.167a.917.917 0 1 0 0-1.834.917.917 0 0 0 0 1.834M1.917 1.917h3.666L8.04 14.19a1.83 1.83 0 0 0 1.833 1.476h8.91a1.83 1.83 0 0 0 1.834-1.476L22.083 6.5H6.5"/>
+              </g>
+            </svg>
+
+
+            <!-- 
+
+            Бейдж с количеством товаров (изначально 0) 
+
+            -->
+
+
+            <span class="cart-badge" aria-hidden="true">0</span>
+          </a>
         </div>
-    </div>
-</header>
+      </div>
+    </header>
+
+
+    <!--
+
+    Основное содержимое страницы
+
+    -->
+
+
     <main class="main">
+
+
+      <!--
+
+      СЕКЦИЯ ГЛАВНОГО БАННЕРА
+
+      -->
+
+
       <section class="hero">
         <div class="container">
           <div class="hero__content">
+
+
+            <!-- 
+
+            Изображение баннера 
+
+            -->
+
+
             <div class="hero__image">
               <img src="./images/header.png" alt="Пример реплики картины в интерьере гостиной">
             </div>
+
+
+            <!-- 
+
+            Текстовая информация баннера 
+
+            -->
+
+
             <div class="hero__info">
               <h1 class="hero__title">Реплики картин<br>от <span class="hero__title-accent">Ink. House</span></h1>
               <p class="hero__text">
                 Высокое качество отрисовки на плотной бумаге или льняном холсте. Редкие произведения, доступные цены.
               </p>
+
+
+              <!-- 
+
+              Кнопка призыва к действию 
+
+              -->
+
+
               <button class="hero__button" type="button">
               Продукция
               </button>
@@ -78,10 +212,27 @@
           </div>
         </div>
       </section>
+
+
+      <!--
+
+      СЕКЦИЯ КАТАЛОГА РЕПРОДУКЦИЙ
+
+      -->
+
+
       <section class="reproductions">
         <div class="reproductions__header">
           <h2 class="reproductions__heading">Репродукции</h2>
-          <!-- Навигация для фильтрации -->
+
+
+          <!-- 
+
+          Навигация-фильтр по странам 
+
+          -->
+
+
           <nav class="reproductions__filter" aria-label="Фильтр картин по странам">
             <ul class="reproductions__filter-list">
               <li class="reproductions__filter-item">
@@ -108,9 +259,25 @@
             </ul>
           </nav>
         </div>
-        <!-- Сетка карточек -->
+
+
+        <!--
+
+        Сетка карточек товаров
+
+        -->
+
+
         <ul class="card-list">
-          <!-- Карточка Франции -->
+
+
+          <!--
+
+          Карточки Франция 
+
+          -->
+
+
           <li class="card-list-item" data-country="france" data-category="classic">
             <article class="card">
               <img class="card__image" src="./images/picture/fr/picture-fr-1.jpg" alt="Картина 'Охота Амура'">
@@ -123,6 +290,15 @@
               </div>
             </article>
           </li>
+
+
+          <!-- 
+
+          Еще 5 карточек Франции 
+
+          -->
+
+
           <li class="card-list-item" data-country="france" data-category="classic">
             <article class="card">
               <img class="card__image" src="./images/picture/fr/picture-fr-2.jpg" alt="Картина 'Охота Амура'">
@@ -183,7 +359,15 @@
               </div>
             </article>
           </li>
-          <!-- Карточка Германии -->
+
+
+          <!--
+
+          Карточки Германии
+
+          -->
+
+
           <li class="card-list-item" data-country="germany" data-category="modern">
             <article class="card">
               <img class="card__image" src="./images/picture/de/picture-de-1.jpg" alt="Картина 'Название немецкой картины'">
@@ -196,6 +380,15 @@
               </div>
             </article>
           </li>
+
+
+          <!-- 
+
+          Еще 5 карточек Германии 
+
+          -->
+
+
           <li class="card-list-item" data-country="germany" data-category="modern">
             <article class="card">
               <img class="card__image" src="./images/picture/de/picture-de-2.jpg" alt="Картина 'Название немецкой картины'">
@@ -256,7 +449,15 @@
               </div>
             </article>
           </li>
-          <!-- Карточка Англии -->
+
+
+          <!--
+
+          Карточки Англии
+
+          -->
+
+
           <li class="card-list-item" data-country="england" data-category="portrait">
             <article class="card">
               <img class="card__image" src="./images/picture/uk/picture-uk-1.jpg" alt="Картина 'Английский портрет'">
@@ -269,6 +470,15 @@
               </div>
             </article>
           </li>
+
+
+          <!-- 
+
+          Еще 5 карточек Англии 
+
+          -->
+
+
           <li class="card-list-item" data-country="england" data-category="portrait">
             <article class="card">
               <img class="card__image" src="./images/picture/uk/picture-uk-2.jpg" alt="Картина 'Английский портрет'">
@@ -331,25 +541,88 @@
           </li>
         </ul>
       </section>
+
+
+      <!--
+
+      Секция новой коллекции
+
+      -->
+
+
       <section class="collection">
         <div class="collection-content">
+
+
+          <!-- 
+
+          Заголовок с иконкой
+
+          -->
+
+
           <div class="collection-title-wrapper">
             <img class="collection-icon" src="./images/star-icon.png" alt="Иконка звезды">
             <h2>Новая коллекция французских авторов</h2>
           </div>
+
+
+          <!-- 
+
+          Описание коллекции
+
+          -->
+
+
           <p>Сложно сказать, почему акционеры крупнейших компаний призывают нас к&nbsp;новым свершениям, которые, в&nbsp;свою очередь, 
             должны быть заблокированы в&nbsp;рамках своих собственных рациональных ограничений.
           </p>
           <p>Принимая во&nbsp;внимание показатели успешности, граница обучения кадров предопределяет высокую востребованность 
             направлений прогрессивного развития.
           </p>
+
+
+          <!-- 
+
+          Кнопка для перехода к коллекции 
+
+          -->
+
+
           <button class="collection-button">Ознакомиться</button>
         </div>
       </section>
+
+
+      <!--
+
+      Секция о команде
+
+      -->
+
+
       <section class="team">
+
+
+        <!--
+
+        Изображение команды
+
+        -->
+
+
         <div class="team__image">
           <img src="./images/team-image.png" alt="Пример реплики картины в интерьере гостиной">
         </div>
+
+
+        <!--
+
+        Иконки преимуществ команды 
+
+        -->
+
+
         <div class="team__content">
           <h1 class="team__title">Наша команда</h1>
           <p class="team__description">
@@ -357,7 +630,15 @@
             поражающих по&nbsp;своей масштабности и&nbsp;грандиозности. Мы вынуждены отталкиваться от&nbsp;того, что консультация с&nbsp;широким 
             активом.
           </p>
-          <!-- Круглые иконки -->
+
+
+          <!-- 
+
+          Круглые иконки 
+
+          -->
+
+
           <div class="team__icons">
             <div class="team__icon">
               <img src="./images/icons/icon-1.png" alt="Иконка 1">
@@ -371,12 +652,29 @@
           </div>
         </div>
       </section>
+
+
+      <!--
+
+      Подвал сайта
+
+      -->
+
+
       <footer class="footer">
         <div class="container">
           <div class="footer__content">
-            <!-- Контакты слева -->
+
+
+            <!-- 
+
+            Блок контактов слева 
+
+            -->
+
+
             <div class="footer__contacts">
-              <a class="footer__logo" href="/">
+              <a class="footer__logo" href="#!">
               <img src="./svg/logo.svg" alt="Логотип Ink. House">
               </a>
               <address class="address header__address">
@@ -384,51 +682,148 @@
                 <p class="address__text">Мастерская</p>
               </address>
             </div>
-            <!-- Навигация по центру -->
+
+
+            <!-- 
+
+            Навигация в подвале 
+
+            -->
+
+
             <nav class="footer__nav" aria-label="Дополнительная навигация">
+
+
+              <!--
+
+              Раздел "Репродукции" 
+
+              -->
+
+
               <div class="footer__nav-group">
                 <h3 class="footer__nav-title">Репродукции</h3>
                 <ul class="footer__nav-list">
-                  <li><a href="/reproductions/france">Франция</a></li>
-                  <li><a href="/reproductions/germany">Германия</a></li>
-                  <li><a href="/reproductions/england">Англия</a></li>
+                  <li><a href="#!">Франция</a></li>
+                  <li><a href="#!">Германия</a></li>
+                  <li><a href="#!">Англия</a></li>
                 </ul>
               </div>
+
+
+              <!-- 
+
+              Раздел "Новинки"
+
+              -->
+
+
               <div class="footer__nav-group">
                 <h3 class="footer__nav-title">Новинки</h3>
                 <ul class="footer__nav-list">
-                  <li><a href="/new/2021">2021</a></li>
-                  <li><a href="/new/2020">2020</a></li>
+                  <li><a href="#!">2021</a></li>
+                  <li><a href="#!">2020</a></li>
                 </ul>
               </div>
+
+
+              <!-- 
+
+              Раздел "О нас" 
+
+              -->
+
+
               <div class="footer__nav-group">
                 <h3 class="footer__nav-title">О нас</h3>
                 <ul class="footer__nav-list">
-                  <li><a href="/about/artists">Художники</a></li>
-                  <li><a href="/about/managers">Менеджеры</a></li>
+                  <li><a href="#!">Художники</a></li>
+                  <li><a href="#!">Менеджеры</a></li>
                 </ul>
               </div>
             </nav>
+
+
+            <!-- 
+
+            Разделительная линия 
+
+            -->
+
+
             <div class="footer__line"></div>
-            <!-- Соцсети и копирайт справа -->
+
+
+            <!-- 
+
+            Соцсети и копирайт справа 
+
+            -->
+
+
             <div class="footer__right-section">
+
+
+              <!-- 
+
+              Социальные сети 
+
+              -->
+
+
               <div class="footer__social">
+
+
+                <!-- 
+
+                Facebook 
+
+                -->
+
+
                 <a href="#!" class="footer__social-link" aria-label="Facebook">
                 <img src="./svg/fb-icon.svg" alt="Facebook" class="social-icon">
                 <img src="./svg/fb-icon-hover.svg" alt="Facebook" class="social-icon-hover">
                 <img src="./svg/fb-icon-active.svg" alt="Facebook" class="social-icon-active">
                 </a>
+
+
+                <!-- 
+
+                Instagram 
+
+                -->
+
+
                 <a href="#!" class="footer__social-link" aria-label="Instagram">
                 <img src="./svg/ig-icon.svg" alt="Instagram" class="social-icon">
                 <img src="./svg/ig-icon-hover.svg" alt="Instagram" class="social-icon-hover">
                 <img src="./svg/ig-icon-active.svg" alt="Instagram" class="social-icon-active">
                 </a>
+
+
+                <!-- 
+
+                YouTube 
+
+                -->
+
+
                 <a href="#!" class="footer__social-link" aria-label="Youtube">
                 <img src="./svg/youtube-icon.svg" alt="Youtube" class="social-icon">
                 <img src="./svg/youtube-icon-hover.svg" alt="Youtube" class="social-icon-hover">
                 <img src="./svg/youtube-icon-active.svg" alt="Youtube" class="social-icon-active">
                 </a>
               </div>
+
+
+              <!-- 
+
+              Копирайт 
+
+              -->
+
+
               <div class="footer__bottom">
                 <p class="footer__copyright">Ink. House ®</p>
                 <p class="footer__copyright">All rights reserved</p>
@@ -438,6 +833,15 @@
         </div>
       </footer>
     </main>
+
+
+    <!-- 
+
+    Подключение JavaScript 
+
+    -->
+
+
     <script src="./styles/javascript.js"></script>
   </body>
 </html>
